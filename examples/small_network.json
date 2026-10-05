@@ -1,0 +1,18 @@
+{
+  "base_mva": 100,
+  "max_iterations": 30,
+  "tolerance_pu": 1e-10,
+  "buses": [
+    {"id": "B1", "type": "slack", "v_min_pu": 0.94, "v_max_pu": 1.06, "p_mw": 0, "q_mvar": 0, "voltage_pu": 1.02, "angle_deg": 0},
+    {"id": "B2", "type": "pq",    "v_min_pu": 0.94, "v_max_pu": 1.06, "p_mw": -90, "q_mvar": -30, "voltage_pu": 0, "angle_deg": 0},
+    {"id": "B3", "type": "pq",    "v_min_pu": 0.94, "v_max_pu": 1.06, "p_mw": -70, "q_mvar": -25, "voltage_pu": 0, "angle_deg": 0},
+    {"id": "B4", "type": "pv",    "v_min_pu": 0.94, "v_max_pu": 1.06, "p_mw": 60, "q_mvar": 0, "voltage_pu": 1.00, "angle_deg": 0}
+  ],
+  "lines": [
+    {"id": "L12", "from_bus": "B1", "to_bus": "B2", "r_pu": 0.020, "x_pu": 0.080, "b_pu": 0.020, "capacity_mva": 130},
+    {"id": "L13", "from_bus": "B1", "to_bus": "B3", "r_pu": 0.030, "x_pu": 0.100, "b_pu": 0.020, "capacity_mva": 90},
+    {"id": "L23", "from_bus": "B2", "to_bus": "B3", "r_pu": 0.025, "x_pu": 0.090, "b_pu": 0.015, "capacity_mva": 80},
+    {"id": "L24", "from_bus": "B2", "to_bus": "B4", "r_pu": 0.015, "x_pu": 0.060, "b_pu": 0.020, "capacity_mva": 90},
+    {"id": "L34", "from_bus": "B3", "to_bus": "B4", "r_pu": 0.020, "x_pu": 0.070, "b_pu": 0.018, "capacity_mva": 80}
+  ]
+}
