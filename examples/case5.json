@@ -1,0 +1,20 @@
+{
+  "base_mva": 100,
+  "max_iter": 50,
+  "tolerance": 1e-8,
+  "buses": [
+    {"id": "B1", "type": "slack", "v_pu": 1.02, "theta_deg": 0, "v_min_pu": 0.95, "v_max_pu": 1.05},
+    {"id": "B2", "type": "PV", "p_mw": 80, "v_pu": 1.01, "v_min_pu": 0.95, "v_max_pu": 1.05},
+    {"id": "B3", "type": "PQ", "p_mw": -90, "q_mvar": -30, "v_min_pu": 0.92, "v_max_pu": 1.08},
+    {"id": "B4", "type": "PQ", "p_mw": -40, "q_mvar": -15, "v_min_pu": 0.92, "v_max_pu": 1.08},
+    {"id": "B5", "type": "PQ", "p_mw": -10, "q_mvar": -4, "v_min_pu": 0.92, "v_max_pu": 1.08}
+  ],
+  "lines": [
+    {"id": "L12", "from": "B1", "to": "B2", "r_pu": 0.02, "x_pu": 0.06, "b_pu": 0.06, "rate_mva": 120},
+    {"id": "L13", "from": "B1", "to": "B3", "r_pu": 0.03, "x_pu": 0.08, "b_pu": 0.05, "rate_mva": 100},
+    {"id": "L23", "from": "B2", "to": "B3", "r_pu": 0.025, "x_pu": 0.07, "b_pu": 0.05, "rate_mva": 90},
+    {"id": "L34", "from": "B3", "to": "B4", "r_pu": 0.02, "x_pu": 0.05, "b_pu": 0.02, "rate_mva": 60},
+    {"id": "L24", "from": "B2", "to": "B4", "r_pu": 0.03, "x_pu": 0.09, "b_pu": 0.02, "rate_mva": 45},
+    {"id": "L45", "from": "B4", "to": "B5", "r_pu": 0.04, "x_pu": 0.10, "b_pu": 0.01, "rate_mva": 25}
+  ]
+}
